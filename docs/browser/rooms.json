@@ -1,0 +1,11 @@
+[
+    { "number": 101, "type": "звичайна", "capacity": 2, "price": 100 },
+    { "number": 102, "type": "преміум", "capacity": 3, "price": 150 },
+    { "number": 103, "type": "бізнес", "capacity": 1, "price": 200 },
+    { "number": 201, "type": "звичайна", "capacity": 2, "price": 100 },
+    { "number": 202, "type": "преміум", "capacity": 3, "price": 150 },
+    { "number": 203, "type": "бізнес", "capacity": 1, "price": 200 },
+    { "number": 301, "type": "звичайна", "capacity": 2, "price": 100 },
+    { "number": 302, "type": "преміум", "capacity": 3, "price": 150 },
+    { "number": 303, "type": "бізнес", "capacity": 1, "price": 200 }
+]
