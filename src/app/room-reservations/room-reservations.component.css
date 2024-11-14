@@ -2,7 +2,6 @@
     background-color: #ffdddd;
     color: #d9534f;
     font-weight: bold;
-    cursor: not-allowed
 }
 
 .reserved:hover {
@@ -111,5 +110,83 @@ tr.inactive td {
 .filters input[type="number"]:disabled, .filters input[type="date"]:disabled, .filters select:disabled {
     background-color: #f0f0f0;
     cursor: not-allowed;
+}
+
+/* Style the form container */
+.booking-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for form groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Input focus styling */
+  input:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  /* Style the booking button */
+  .btn-book {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .btn-book:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the "На головну" button */
+  .btn-home {
+    margin-top: 20px;
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 20px;
+  }
+  
+  .btn-home a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .btn-home:hover {
+    background-color: #1976d2;
+  }
+  
+.selectToDelete {
+    outline: 2px solid blue; /* Customize the color and thickness */
 }
   
