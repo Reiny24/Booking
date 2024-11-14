@@ -1,0 +1,62 @@
+<div class="filters">
+    <label for="roomType">Тип кімнати:</label>
+    <select id="roomType" [(ngModel)]="filter.type">
+      <option value="">Усі</option>
+      <option value="звичайна">Звичайна</option>
+      <option value="преміум">Преміум</option>
+      <option value="бізнес">Бізнес</option>
+    </select>
+  
+    <label for="roomCapacity">Кількість спальних місць:</label>
+    <input id="roomCapacity" type="number" [(ngModel)]="filter.capacity" min="1">
+  
+    <label for="priceRange">Ціна:</label>
+    <input id="priceMin" type="number" [(ngModel)]="filter.price.min" placeholder="Мінімум" min="0">
+    <input id="priceMax" type="number" [(ngModel)]="filter.price.max" placeholder="Максимум" min="0">
+  
+    <label for="dateRange">Дата бронювання:</label>
+    <input id="startDate" type="date" [(ngModel)]="filter.dateRange.start">
+    <input id="endDate" type="date" [(ngModel)]="filter.dateRange.end">
+</div>
+  
+<h1>Таблиця резервування готелю {{hotelId}}</h1>
+<div class="table-container" (scroll)="onScroll($event)">
+    <table>
+        <thead>
+        <tr>
+            <th>Номер кімнати</th>
+            <th>Тип</th>
+            <th>Кількість місць</th>
+            <th>Ціна</th>
+            <th *ngFor="let day of days">{{ day }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let room of getFilteredRooms()" [ngClass]="{ 'inactive': !isSelectedRoom(room.number) && selectedRoom !== null }">
+            <td>{{ room.number }}</td>
+            <td>{{ room.type }}</td>
+            <td>{{ room.capacity }}</td>
+            <td>{{ room.price }} грн</td>
+            <td *ngFor="let day of days" [ngClass]="{ 'reserved': isRoomReserved(room.number, day), 'selected': selectedDates.includes(day) }"
+                (click)="onSelectDate(day, room.number)">
+            {{ isRoomReserved(room.number, day) ? 'Зарезервовано' : 'Доступно' }}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+  
+  
+<div *ngIf="selectedRoom !== null && selectedDates.length > 0">
+    <h3>Бронювання для кімнати {{ selectedRoom }}</h3>
+    <p>Вибрані дати: {{ selectedDates.join(', ') }}</p>
+  
+    <label for="userName">Ваше ім'я:</label>
+    <input id="userName" [(ngModel)]="userName" type="text" placeholder="Введіть ім'я">
+  
+    <button (click)="fbPostData()">Забронювати</button>
+</div>
+
+<button>
+    <a href="">На головну</a>
+</button>

@@ -1,0 +1,27 @@
+[
+    {
+      "room": 101,
+      "checkinDate": "2024-11-14",
+      "checkoutDate": "2024-11-16",
+      "name": "123"
+    },
+    {
+      "room": 102,
+      "checkinDate": "2024-11-15T00:00:00.000Z",
+      "checkoutDate": "2024-11-17T00:00:00.000Z",
+      "name": "123"
+    },
+    {
+      "room": 103,
+      "checkinDate": "2024-11-18T00:00:00.000Z",
+      "checkoutDate": "2024-11-20T00:00:00.000Z",
+      "name": "123"
+    },
+    {
+      "room": 101,
+      "checkinDate": "2024-11-18T00:00:00.000Z",
+      "checkoutDate": "2024-12-20T00:00:00.000Z",
+      "name": "123"
+    }
+]
+  

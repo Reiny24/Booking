@@ -1,0 +1,115 @@
+.reserved {
+    background-color: #ffdddd;
+    color: #d9534f;
+    font-weight: bold;
+    cursor: not-allowed
+}
+
+.reserved:hover {
+    background-color: #ffdddd;
+}
+  
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    width: 120px;
+}
+
+td {
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: lightblue;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.selected {
+    background-color: #28a745; /* Зелений колір для обраних клітинок */
+}
+
+tr.inactive td {
+    background-color: lightgray; /* Сірий колір для неактивних кімнат */
+    cursor: not-allowed; /* Блокування можливості натискання */
+}
+
+.filters {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+  
+.filters label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+  
+.filters select, .filters input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 180px;
+}
+  
+.filters input[type="date"] {
+    width: 160px;
+}
+  
+.filters input[type="number"] {
+    width: 120px;
+}
+  
+.filters select, .filters input {
+    box-sizing: border-box;
+}
+  
+.filters button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+  
+.filters button:hover {
+    background-color: #0056b3;
+}
+  
+.filters input[type="number"], .filters input[type="date"], .filters select {
+    transition: border-color 0.3s ease;
+}
+  
+.filters input[type="number"]:focus, .filters input[type="date"]:focus, .filters select:focus {
+    border-color: #007bff;
+}
+  
+.filters input[type="number"]:disabled, .filters input[type="date"]:disabled, .filters select:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+  

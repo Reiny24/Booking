@@ -1,0 +1,6 @@
+<h2>Available Hotels</h2>
+<ul>
+  <li *ngFor="let hotel of hotels" (click)="viewReservations(hotel.id)">
+    <h3>{{ hotel.name }}</h3>
+  </li>
+</ul>
