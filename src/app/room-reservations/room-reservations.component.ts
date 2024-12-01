@@ -88,7 +88,7 @@ export class RoomReservationsComponent implements OnInit {
       
       if (building) {
         // Fetch room details for the specific building
-        this.dataService.fetch('http://10.0.2.15:8080/rooms?buildingId=B').subscribe((data1) => {
+        this.dataService.fetch('http://localhost:8080/rooms?buildingId=' + building.roomBuilding).subscribe((data1) => {
           // Map the fetched data to the rooms
           this.rooms = building.roomNumbers.map((roomNumber: number) => {
             // Find the corresponding room data from the second fetch (data1)
@@ -223,11 +223,14 @@ export class RoomReservationsComponent implements OnInit {
         companyPhoneNumber: this.companyPhone,
       };
       
+      let dayToAdd = 0;
+      if (this.formatDate(checkinDate, 0) === this.formatDate(checkoutDate, 0)) dayToAdd = 1;
+
       this.dataService.postBooking(
         this.selectedRoom,
         this.hotelId,
         this.formatDate(checkinDate, 0),
-        this.formatDate(checkoutDate, 1),
+        this.formatDate(checkoutDate, dayToAdd),
         guest,
         company
       ).subscribe(
